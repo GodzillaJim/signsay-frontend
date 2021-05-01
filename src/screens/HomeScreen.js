@@ -32,7 +32,7 @@ const HomeScreen = () => {
         setLandingImage(wideScreenImage);
         break;
     }
-  });
+  }, [window.innerWidth]);
   return (
     <div className='bg-light'>
       <Container>
