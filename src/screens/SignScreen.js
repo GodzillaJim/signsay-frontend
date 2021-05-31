@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Card, Col, Image } from 'react-bootstrap';
+import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 import { MDBMask, MDBView, MDBContainer } from 'mdbreact';
+import { ImageOverlay } from 'react-image-overlay-effect';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
-import ComingSoonw200 from '../images/coming-soon/2770497_iid4jg_c_scale,w_200.jpg';
-import ComingSoonw617 from '../images/coming-soon/2770497_iid4jg_c_scale,w_617.jpg';
-import ComingSoonw981 from '../images/coming-soon/2770497_iid4jg_c_scale,w_981.jpg';
-import ComingSoonw1328 from '../images/coming-soon/2770497_iid4jg_c_scale,w_1328.jpg';
-import ComingSoonw1400 from '../images/coming-soon/2770497_iid4jg_c_scale,w_1400.jpg';
+import ComingSoonw200 from '../images/waiting/waiting_odvwag_c_scale,w_200.jpg';
+import ComingSoonw617 from '../images/waiting/waiting_odvwag_c_scale,w_1022.jpg';
+import ComingSoonw981 from '../images/waiting/waiting_odvwag_c_scale,w_1400.jpg';
+import Waiting from '../images/waiting.jpg';
 
 const SignScreen = () => {
   const [image, setImage] = useState(ComingSoonw981);
@@ -15,30 +15,44 @@ const SignScreen = () => {
     switch (window.innerWidth) {
       case window.innerWidth <= 200:
         return setImage(ComingSoonw200);
-      case window.innerWidth <= 617:
+      case window.innerWidth <= 1022:
         return setImage(ComingSoonw617);
-      case window.innerWidth <= 981:
+      case window.innerWidth <= 1400:
         return setImage(ComingSoonw981);
-      case window.innerWidth <= 1328:
-        return setImage(ComingSoonw1328);
-      case window.innerWidth > 1328:
-        return setImage(ComingSoonw1400);
       default:
         return setImage(ComingSoonw617);
     }
   }, [window.innerWidth]);
   return (
-    <div className='bg-light my-3'>
-      <AppBar />
-      <MDBContainer className='mt-5'>
-        <MDBView>
-          <img src={image} alt='People-working' />
-          <MDBMask className='flex-center' pattern={5}>
-            <p>Coming Soon</p>
-          </MDBMask>
-        </MDBView>
-      </MDBContainer>
-      <Footer />
+    <div className='bg-light'>
+      <Container>
+        <AppBar />
+        <section style={{ marginTop: '75px' }}>
+          <Row>
+            <Col>
+              <Image
+                src={image}
+                thumbnail
+                alt='person waiting'
+                style={{ width: '0.8vw' }}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={12} md={10} lg={10}>
+              <Card>
+                <Card.Body>
+                  <h1 className='text-info'>Coming Soon...</h1>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </section>
+        <Footer
+          author='Vecteezy'
+          attribution={'https://www.vecteezy.com/free-vector/holiday'}
+        />
+      </Container>
     </div>
   );
 };

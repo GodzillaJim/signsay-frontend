@@ -124,7 +124,7 @@ const ContributeScreen = () => {
           </section>
           <section id='content'>
             <Row>
-              <Col sm='auto' xs={'auto'} md={'auto'}>
+              <Col sm={12} xs={12} lg={6} md={6}>
                 <h4>Sentences</h4>
                 <Card>
                   <Card.Body>
@@ -171,7 +171,7 @@ const ContributeScreen = () => {
                   </Card.Footer>
                 </Card>
               </Col>
-              <Col sm='auto' xs={'auto'} md={'auto'}>
+              <Col sm={12} xs={12} lg={6} md={6}>
                 <h4>Video</h4>
                 <Card>
                   <Card.Header>
