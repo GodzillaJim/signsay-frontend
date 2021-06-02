@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 import AppBar from '../components/AppBar';
-import Footer from '../components/Footer';
 import ComingSoonw200 from '../images/waiting/waiting_odvwag_c_scale,w_200.jpg';
 import ComingSoonw617 from '../images/waiting/waiting_odvwag_c_scale,w_1022.jpg';
 import ComingSoonw981 from '../images/waiting/waiting_odvwag_c_scale,w_1400.jpg';
