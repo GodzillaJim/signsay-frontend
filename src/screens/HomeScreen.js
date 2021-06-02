@@ -161,7 +161,7 @@ const HomeScreen = () => {
             <Row>
               <Col sm={6}>
                 <Card style={{ fontFamily: 'Times New Roman' }}>
-                  <Card.Header>Signers</Card.Header>
+                  <Card.Header className='h5 text-primary'>Signers</Card.Header>
                   <Card.Body>
                     <Card.Text>
                       <ListGroup as='ul' className='bg-light text-dark'>
@@ -194,7 +194,9 @@ const HomeScreen = () => {
               </Col>
               <Col sm={6}>
                 <Card style={{ fontFamily: 'Times New Roman' }}>
-                  <Card.Header>Developers</Card.Header>
+                  <Card.Header className='h5 text-primary'>
+                    Developers
+                  </Card.Header>
                   <Card.Body>
                     <ListGroup>
                       <ListGroup.Item key='1'>
@@ -210,7 +212,9 @@ const HomeScreen = () => {
                         We use ReactJS a lot to deliver a convenient interface.
                         We could use your help if you use it too.
                       </ListGroup.Item>
-                      <ListGroup.Item key='3'></ListGroup.Item>
+                      <ListGroup.Item key='3'>
+                        <br />
+                      </ListGroup.Item>
                     </ListGroup>
                   </Card.Body>
                 </Card>

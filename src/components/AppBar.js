@@ -24,7 +24,7 @@ const AppBar = () => {
       fixed={'top'}
       style={{ height: window.innerWidth < 720 ? '13vh' : '10vh' }}
     >
-      <Navbar.Brand href='#home'>
+      <Navbar.Brand href='/'>
         <Image src={Logo} alt='signsay-logo' style={{ height: '45px' }} />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
