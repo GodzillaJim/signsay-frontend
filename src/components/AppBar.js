@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Navbar, Nav, Image } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import Logo from '../logo.png';
 
 const AppBar = () => {

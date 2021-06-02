@@ -15,7 +15,7 @@ export const loadSentenceReducer = (
     case GET_SENTENCES_SUCCESS:
       return { loading: false, sentences: action.payload };
     case GET_SENTENCES_FAIL:
-      return { loading: false, error: action.payload };
+      return { loading: false, error: action.payload, sentences: [] };
     case REMOVE_ONE_SENTENCE:
       return { sentences: action.payload, ...state };
     default:

@@ -1,5 +1,4 @@
 import React from 'react';
-import AppBar from './components/AppBar';
 import HomeScreen from './screens/HomeScreen';
 import ContributeScreen from './screens/ContributeScreen';
 import SignScreen from './screens/SignScreen';

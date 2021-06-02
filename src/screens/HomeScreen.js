@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import AppBar from '../components/AppBar';
-import WordReveal from 'react-text-reveal';
-import { Container, Row, Col, Card, Image, Button } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Image,
+  Button,
+  ListGroup,
+} from 'react-bootstrap';
 import Footer from '../components/Footer';
 import TypeWriterEffect from 'react-typewriter-effect';
 import wideScreenImage from '../images/landing/sign-language_oqplmd_c_scale,w_1148.jpg';
@@ -32,18 +39,14 @@ const HomeScreen = () => {
         setLandingImage(wideScreenImage);
         break;
     }
-  }, [window.innerWidth]);
+  }, []);
   return (
     <div className='bg-light'>
       <Container>
         <header className='row'>
           <AppBar />
         </header>
-        <main
-          className='row'
-          style={{ zIndex: '2' }}
-          style={{ marginTop: '50px' }}
-        >
+        <main className='row' style={{ marginTop: '50px', zIndex: '2' }}>
           <section id='landing' style={{ zIndex: '1' }} className='section'>
             <Row
               style={{
@@ -136,7 +139,7 @@ const HomeScreen = () => {
                   <i className='text-info h4 fas fa-quote-left'></i>
                 </span>
                 &nbsp;{' '}
-                <p style={{ fontFamily: 'Times New Roman' }} className='h4'>
+                <p style={{ fontFamily: 'Times New Roman' }} className='h5'>
                   SignSay translates British Sign Language into English. About
                   5% of the world's population have impaired hearing and use
                   sign language to communicate. Yet, the world has less than
@@ -145,16 +148,74 @@ const HomeScreen = () => {
                   coffee shops and other professional and social settings. We
                   are building an application to bridge this gap. Users will be
                   able to capture signs using their handheld devices and receive
-                  their textual translation. If you are a signer, you can help
-                  make the app better by submitting videos and images on signs
-                  to train our model. Follow this <a href='/contribute'>link</a>{' '}
-                  to contribute. &nbsp;
+                  their textual translation. The application will be ready in a
+                  few weeks and will be offered free of charge. If you are as
+                  excited to make the world a better place as we are, scroll
+                  below on how you can contribute. &nbsp;
                 </p>
                 <span text-right>
                   <i className=' text-info h4 fas fa-quote-right'></i>
                 </span>
               </Card.Body>
             </Card>
+            <Row>
+              <Col sm={6}>
+                <Card style={{ fontFamily: 'Times New Roman' }}>
+                  <Card.Header>Signers</Card.Header>
+                  <Card.Body>
+                    <Card.Text>
+                      <ListGroup as='ul' className='bg-light text-dark'>
+                        <ListGroup.Item as='li' key='1'>
+                          If you can Sign in any language, we need your help
+                          creating our app. Hit the Contribute button and start
+                          recording videos. We have already prepared the
+                          sentences.
+                        </ListGroup.Item>
+                        <ListGroup.Item as='li' key='2'>
+                          If you already have you videos of signs and gestures
+                          recorded, please shoot me an email
+                          <Button
+                            variant='link'
+                            href='mailto:jimnam99@gmail.com'
+                          >
+                            here
+                          </Button>
+                          and then we can agree on the best way of exchanging
+                          the videos.
+                        </ListGroup.Item>
+                        <ListGroup.Item as='li' key='3'>
+                          Are you an expert in sign language? We need help with
+                          the semantics and syntax of Sign Language.
+                        </ListGroup.Item>
+                      </ListGroup>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col sm={6}>
+                <Card style={{ fontFamily: 'Times New Roman' }}>
+                  <Card.Header>Developers</Card.Header>
+                  <Card.Body>
+                    <ListGroup>
+                      <ListGroup.Item key='1'>
+                        We are using Tensorflow, PyTorch, and Keras to run our
+                        models. If you have working knowledge in any of them, we
+                        could use your help. Shoot me an
+                        <Button variant='link' href='mailto:jimnam99@gmail.com'>
+                          email
+                        </Button>
+                        . We use <i class='fab fa-python m-1'></i>
+                      </ListGroup.Item>
+                      <ListGroup.Item key='2'>
+                        We use ReactJS a lot to deliver a convenient interface.
+                        We could use your help if you use it too.
+                      </ListGroup.Item>
+                      <ListGroup.Item key='3'></ListGroup.Item>
+                    </ListGroup>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
           </section>
         </main>
       </Container>

@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
-import { MDBMask, MDBView, MDBContainer } from 'mdbreact';
-import { ImageOverlay } from 'react-image-overlay-effect';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 import ComingSoonw200 from '../images/waiting/waiting_odvwag_c_scale,w_200.jpg';
 import ComingSoonw617 from '../images/waiting/waiting_odvwag_c_scale,w_1022.jpg';
 import ComingSoonw981 from '../images/waiting/waiting_odvwag_c_scale,w_1400.jpg';
-import Waiting from '../images/waiting.jpg';
 
 const SignScreen = () => {
   const [image, setImage] = useState(ComingSoonw981);
@@ -22,7 +19,7 @@ const SignScreen = () => {
       default:
         return setImage(ComingSoonw617);
     }
-  }, [window.innerWidth]);
+  }, []);
   return (
     <div className='bg-light'>
       <Container>
@@ -48,10 +45,6 @@ const SignScreen = () => {
             </Col>
           </Row>
         </section>
-        <Footer
-          author='Vecteezy'
-          attribution={'https://www.vecteezy.com/free-vector/holiday'}
-        />
       </Container>
     </div>
   );

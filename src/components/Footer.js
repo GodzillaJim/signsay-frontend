@@ -3,10 +3,10 @@ import { Navbar } from 'react-bootstrap';
 
 const Footer = ({ attribution, author }) => {
   return (
-    <Navbar fixed='bottom' bg='dark' className='navbar-fixed-bottom my-2'>
+    <Navbar bg='dark' className='my-2'>
       <span className='mx-auto'>
         &copy; Copyright 2021{' '}
-        <a target='_blank' href='http://jimna.dx.am'>
+        <a target='_blank' rel='noreferrer' href='http://jimna.dx.am'>
           GodzillaJim
         </a>
       </span>

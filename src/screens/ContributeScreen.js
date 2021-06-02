@@ -20,10 +20,8 @@ const ContributeScreen = () => {
   const dispatch = useDispatch();
   const [activeSentence, setActiveSentence] = useState('');
   const [completeSentences, setCompleteSentences] = useState([]);
-  const [sentences, setSentences] = useState();
-  const [showVideo, setShowVideo] = useState(false);
   const [videoBlob, setVideoBlob] = useState(false);
-  const { loading, error, sentences: importedSentences } = useSelector(
+  const { loading, sentences: importedSentences } = useSelector(
     (state) => state.loadSentence
   );
   const { loading: sendingVideo, success } = useSelector(
@@ -46,7 +44,6 @@ const ContributeScreen = () => {
     }
   };
   const handleRecord = (videoBlob) => {
-    console.log(videoBlob);
     setVideoBlob(videoBlob);
   };
   const handleSubmitVideo = (e) => {
@@ -58,8 +55,10 @@ const ContributeScreen = () => {
     setActiveSentence('');
   };
   useEffect(() => {
-    dispatch(getSentences());
-  }, [importedSentences]);
+    if (importedSentences.length < 1 && !loading) {
+      dispatch(getSentences());
+    }
+  });
 
   return (
     <div id='contribute' style={{ fontFamily: 'Times New Roman' }}>
@@ -189,7 +188,7 @@ const ContributeScreen = () => {
                     <VideoRecorder
                       onRecordingComplete={handleRecord}
                       showReplayControls
-                      timeLimit={30000}
+                      timeLimit={60000}
                     />
                   </Card.Body>
                   <Card.Footer className='text-right'>
