@@ -1,11 +1,13 @@
 {
   "name": "signsay-frontend",
   "version": "0.1.0",
-  "proxy": "https://signsay.herokuapp.com/",
+  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/lab": "^4.0.0-alpha.58",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -15,6 +17,7 @@
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
     "react-image-overlay-effect": "^1.0.0",
+    "react-media-recorder": "^1.4.0",
     "react-record-webcam": "^0.0.11",
     "react-redux": "^7.2.4",
     "react-router": "^5.2.0",

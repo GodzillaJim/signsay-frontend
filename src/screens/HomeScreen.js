@@ -153,7 +153,7 @@ const HomeScreen = () => {
                   excited to make the world a better place as we are, scroll
                   below on how you can contribute. &nbsp;
                 </p>
-                <span text-right>
+                <span className='text-right'>
                   <i className=' text-info h4 fas fa-quote-right'></i>
                 </span>
               </Card.Body>
@@ -163,32 +163,27 @@ const HomeScreen = () => {
                 <Card style={{ fontFamily: 'Times New Roman' }}>
                   <Card.Header className='h5 text-primary'>Signers</Card.Header>
                   <Card.Body>
-                    <Card.Text>
-                      <ListGroup as='ul' className='bg-light text-dark'>
-                        <ListGroup.Item as='li' key='1'>
-                          If you can Sign in any language, we need your help
-                          creating our app. Hit the Contribute button and start
-                          recording videos. We have already prepared the
-                          sentences.
-                        </ListGroup.Item>
-                        <ListGroup.Item as='li' key='2'>
-                          If you already have you videos of signs and gestures
-                          recorded, please shoot me an email
-                          <Button
-                            variant='link'
-                            href='mailto:jimnam99@gmail.com'
-                          >
-                            here
-                          </Button>
-                          and then we can agree on the best way of exchanging
-                          the videos.
-                        </ListGroup.Item>
-                        <ListGroup.Item as='li' key='3'>
-                          Are you an expert in sign language? We need help with
-                          the semantics and syntax of Sign Language.
-                        </ListGroup.Item>
-                      </ListGroup>
-                    </Card.Text>
+                    <ListGroup className='bg-light text-dark'>
+                      <ListGroup.Item key='1'>
+                        If you can Sign in any language, we need your help
+                        creating our app. Hit the Contribute button and start
+                        recording videos. We have already prepared the
+                        sentences.
+                      </ListGroup.Item>
+                      <ListGroup.Item key='2'>
+                        If you already have you videos of signs and gestures
+                        recorded, please shoot me an email
+                        <Button variant='link' href='mailto:jimnam99@gmail.com'>
+                          here
+                        </Button>
+                        and then we can agree on the best way of exchanging the
+                        videos.
+                      </ListGroup.Item>
+                      <ListGroup.Item key='3'>
+                        Are you an expert in sign language? We need help with
+                        the semantics and syntax of Sign Language.
+                      </ListGroup.Item>
+                    </ListGroup>
                   </Card.Body>
                 </Card>
               </Col>
@@ -206,7 +201,7 @@ const HomeScreen = () => {
                         <Button variant='link' href='mailto:jimnam99@gmail.com'>
                           email
                         </Button>
-                        . We use <i class='fab fa-python m-1'></i>
+                        . We use <i className='fab fa-python m-1'></i>
                       </ListGroup.Item>
                       <ListGroup.Item key='2'>
                         We use ReactJS a lot to deliver a convenient interface.

@@ -10,6 +10,7 @@ export const getSentences = () => async (dispatch) => {
   try {
     dispatch({ type: GET_SENTENCES_REQUEST });
     const { data } = await axios.get('/sentences');
+    console.log(data);
     dispatch({ type: GET_SENTENCES_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: GET_SENTENCES_FAIL, payload: [] });

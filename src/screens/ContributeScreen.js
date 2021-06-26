@@ -189,6 +189,7 @@ const ContributeScreen = () => {
                       onRecordingComplete={handleRecord}
                       showReplayControls
                       timeLimit={60000}
+              
                     />
                   </Card.Body>
                   <Card.Footer className='text-right'>

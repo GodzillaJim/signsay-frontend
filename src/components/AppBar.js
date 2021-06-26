@@ -31,7 +31,7 @@ const AppBar = () => {
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='ml-auto text-primary p-1'>
           <Nav.Item>
-            <Nav.Link className='text-primary text-bold' href='/#home'>
+            <Nav.Link className='text-primary text-bold' href='/'>
               Home
             </Nav.Link>
           </Nav.Item>
