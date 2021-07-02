@@ -198,7 +198,11 @@ const TestScreen = () => {
         onHide={(e) => setShowInstructions(false)}
         onEscapeKeyDown={(e) => setShowInstructions(false)}
       >
-        <Modal.Header className='h4 text-primary' closeButton>
+        <Modal.Header
+          className='h4 text-primary'
+          closeButton
+          className='bg-primary text-light'
+        >
           Please read these instructions
         </Modal.Header>
         <Modal.Body>

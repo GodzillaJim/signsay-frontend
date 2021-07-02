@@ -3,6 +3,7 @@ import HomeScreen from './screens/HomeScreen';
 import ContributeScreen from './screens/ContributeScreen';
 import SignScreen from './screens/SignScreen';
 import TestScreen from './screens/TestScreen';
+import FacebookPayScreen from './screens/FacebookPayScreen';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './bootstrap.min.css';
 import './App.css';
@@ -12,8 +13,9 @@ const App = () => {
     <Router>
       <div>
         <Switch>
+          <Route exact path='/pay' component={FacebookPayScreen} />
           <Route exact path='/test'>
-            <TestScreen/>
+            <TestScreen />
           </Route>
           <Route exact path='/contribute'>
             <ContributeScreen />
