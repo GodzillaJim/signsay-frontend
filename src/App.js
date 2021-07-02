@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route exact path='/pay' component={FacebookPayScreen} />
+          {/* <Route exact path='/pay' component={FacebookPayScreen} /> */}
           <Route exact path='/test'>
             <TestScreen />
           </Route>
