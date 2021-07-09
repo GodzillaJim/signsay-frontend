@@ -3,7 +3,7 @@ import HomeScreen from './screens/HomeScreen';
 import ContributeScreen from './screens/ContributeScreen';
 import SignScreen from './screens/SignScreen';
 import TestScreen from './screens/TestScreen';
-import FacebookPayScreen from './screens/FacebookPayScreen';
+// import FacebookPayScreen from './screens/FacebookPayScreen';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './bootstrap.min.css';
 import './App.css';

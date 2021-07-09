@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Container,
   Row,
   Col,
   Card,
@@ -8,7 +7,6 @@ import {
   Button,
   Navbar,
   ListGroup,
-  Image,
   Modal,
 } from 'react-bootstrap';
 import axios from 'axios';
@@ -24,7 +22,7 @@ const FacebookPayScreen = () => {
     if (loggedInMemory) {
       setLoggedIn(true);
     }
-  });
+  }, [setLoggedIn]);
 
   const handleLogin = () => {
     let { data } = async () =>
@@ -33,10 +31,10 @@ const FacebookPayScreen = () => {
       setLoggedIn(true);
       localStorage.setItem('loggedInMemory', true);
     } else {
-      setMessage('Username or password is wrong');
+      setMessage('Username or password is wrong!');
     }
   };
-  const handleFacebookPay = () => {};
+  //
   return (
     <>
       {loggedIn ? (

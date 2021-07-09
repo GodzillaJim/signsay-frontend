@@ -16,19 +16,16 @@ import { sendVideoAction } from '../actions/videoActions';
 import countries from '../data/countries.json';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
-import AppBar from '../components/AppBar';
-import Footer from '../components/Footer';
 import VideoRecorder from 'react-video-recorder';
 const TestScreen = () => {
-  const [languages, setLanguages] = useState([
-    'American SL',
-    'British SL',
-    'New Zealand',
-    'Chinese SL',
-    'German SL',
-    'K',
-  ]);
+  // const [languages, setLanguages] = useState([
+  //   'American SL',
+  //   'British SL',
+  //   'New Zealand',
+  //   'Chinese SL',
+  //   'German SL',
+  //   'K',
+  // ]);
   const [showInstructions, setShowInstructions] = useState(true);
   const dispatch = useDispatch();
   const [activeSentence, setActiveSentence] = useState('');
@@ -199,9 +196,8 @@ const TestScreen = () => {
         onEscapeKeyDown={(e) => setShowInstructions(false)}
       >
         <Modal.Header
-          className='h4 text-primary'
+          className='h4 text-primary bg-primary text-light'
           closeButton
-          className='bg-primary text-light'
         >
           Please read these instructions
         </Modal.Header>
